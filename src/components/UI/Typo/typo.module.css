@@ -26,6 +26,14 @@
     color: var(--global-green-color);
 }
 
+.typo_light {
+    color: var(--global-background-color);
+}
+
+.typo_lightGreen {
+    color: var(--global-green-light-color);
+}
+
 @media screen and (max-width: 768px) {
     .typo_title {
         font-size: var(--global-mobile-title-size);

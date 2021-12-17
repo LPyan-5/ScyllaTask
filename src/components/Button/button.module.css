@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 200px;
     background: var(--global-green-color);
-    border-radius: 18px;
+    border-radius: 30px;
     opacity: 1;
     border: 0px;
     cursor: pointer;
@@ -15,18 +15,34 @@
     transition: 0.5s;
 }
 
-.disabledButton {
-    background: #F6F7F8;
-    cursor: auto;
-}
-
 .primary:hover:enabled {
     transition: 0.5s;
-    background: #2D6A4C;
+    background: var(--global-green-light-color);
+}
+
+.primary:hover .button_label {
+    color: var(--global-green-color);
 }
 
 .primary:focus {
     outline: none;
+}
+
+.darkMode {
+    background: var(--global-green-light-color);
+}
+
+.darkMode:hover:enabled {
+    background: var(--global-green-color);
+}
+
+.darkMode:hover .button_label {
+    color: #FFFFFF;
+}
+
+.disabledButton {
+    background: #F6F7F8;
+    cursor: auto;
 }
 
 .button_label {
@@ -41,6 +57,10 @@
 
 .disabledButton .button_label {
     color: var(--global-disable-color);
+}
+
+.darkMode .button_label {
+    color: var(--global-green-color);
 }
 
 @media screen and (max-width: 450px) {

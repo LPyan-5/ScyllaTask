@@ -5,14 +5,27 @@
     padding: 15px 10px;
     cursor: pointer;
     box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.darkMode {
+    border-top: 1px solid var(--global-green-light-color);
 }
 
 .root:hover {
-    background-color: #C1CDC1;
+    background-color: var(--global-green-light-color);
+}
+
+.darkMode:hover {
+    background-color: var(--global-green-color);
 }
 
 .root:last-child {
     border-bottom: 1px solid var(--global-green-border-color);
+}
+
+.darkMode:last-child {
+    border-bottom: 1px solid var(--global-green-light-color);
 }
 
 .pic {
