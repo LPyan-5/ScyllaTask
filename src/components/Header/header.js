@@ -4,6 +4,7 @@ import Switch from '../Switch';
 import { ThemeContext } from '../../contexts/theme';
 import Search from "../Search";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 	const [{ isDark }, toggleTheme ] = useContext(ThemeContext);
@@ -12,7 +13,9 @@ const Header = () => {
 	return (
 		<div className={`${classes.root} ${isDark && classes.darkMode}`} >
 			<div className={classes.top}>
-				<img src={`/images/${isDark ? "logoDark" : "logoLight"}.png`} className={classes.logo} alt=""/>
+				<Link to="/">
+					<img src={`/images/${isDark ? "logoDark" : "logoLight"}.png`} className={classes.logo} alt=""/>
+				</Link>
 				<Switch action={toggleTheme} value={isDark}/>
 			</div>
 			<Search users={users}/>

@@ -22,7 +22,8 @@ const Home = () => {
             const response = await axios.get(
                 `https://randomuser.me/api/?page=${page}&results=8&nat=us,gb`
             );
-            dispatch(actions.setUsers([...users, ...response.data.results]))
+            localStorage.setItem("users", JSON.stringify([...users, ...response.data.results]));
+            dispatch(actions.setUsers([...users, ...response.data.results]));
             setGetErr('');
         } catch (error) {
             setGetErr('Error while loading data. Try again later.') ;           
