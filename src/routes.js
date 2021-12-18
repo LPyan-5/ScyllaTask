@@ -1,9 +1,10 @@
 import HomePage from "./pages/HomePage";
+import UserPage from "./pages/UserPage";
 
 const Routes = [
     {
         path: "/user/:id",
-        // component:
+        component: UserPage,
         exact: true
     },
     {

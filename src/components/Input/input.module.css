@@ -1,0 +1,22 @@
+.input {
+    max-width: 350px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--global-green-light-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 16px;
+    line-height: 1.2rem;
+    font-size: var(--global-text-size);
+    color: var(--global-text-color);
+    font-family: var(--global-font-medium);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: #A2A2A2;
+    font-size: var(--global-text-size);
+}
