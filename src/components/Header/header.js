@@ -16,7 +16,9 @@ const Header = () => {
 				<Link to="/">
 					<img src={`/images/${isDark ? "logoDark" : "logoLight"}.png`} className={classes.logo} alt=""/>
 				</Link>
-				<Switch action={toggleTheme} value={isDark}/>
+				<div className={classes.swicthWrapper}>
+					<Switch action={toggleTheme} value={isDark}/>
+				</div>
 			</div>
 			<Search users={users}/>
 		</div>
