@@ -41,7 +41,7 @@ const ListItem = ({ user }) => {
                     </div>
                     <div className={classes.rowMobile}>
                         <Typo as="p" variant="text" font="bold" color={ "primary"} className={classes.title}>Email:</Typo> 
-                        <Typo variant="text" color={"primary"}>{email ? email : "-"}</Typo>
+                        <Typo variant="text" color={"primary"} className={classes.email}>{email ? email : "-"}</Typo>
                     </div>
                 </div>
                 :
@@ -62,11 +62,11 @@ const ListItem = ({ user }) => {
                         <Typo variant="text" color={isDark ? "light" : "primary"}>{`${get(name, "first", "-")} ${get(name, "last", "-")}`}</Typo>
                     }
                 </div>
-                <div  className={classes.row}>
+                <div className={classes.row}>
                     <Typo as="p" variant="text" font="bold" color={isDark ? "lightGreen" : "primary"} className={classes.title}>Country:</Typo> 
                     <Typo variant="text" color={isDark ? "light" : "primary"}>{get(location, "country", "-")}</Typo>
                 </div>
-                <div  className={classes.row}>
+                <div className={classes.row}>
                     <Typo as="p" variant="text" font="bold" color={isDark ? "lightGreen" : "primary"} className={classes.title}>Email:</Typo> 
                     <Typo variant="text" color={isDark ? "light" : "primary"}>{email ? email : "-"}</Typo>
                 </div>

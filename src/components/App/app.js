@@ -13,7 +13,7 @@ const App = () => {
 	}, [isDark, theme]);
  
 	return (
-		<div className={`${classes.root} ${isDark && classes.darkMode}`}>
+		<div className={classes.root}>
 			<Header/>
 			{renderRoutes(Routes)}
 		</div>

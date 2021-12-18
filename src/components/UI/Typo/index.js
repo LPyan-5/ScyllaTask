@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './typo.module.css';
 //props
-//variant = "title"||"category"||"p"
+//variant = "title"||"text"||"p"
 //color = "primary"||"secondary"
 //font = "medium"||"bold"
 const Typo = ({
