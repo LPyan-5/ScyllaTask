@@ -109,3 +109,16 @@
         color: var(--global-green-color);
     }
 }
+
+@media screen and (max-width: 510px) {
+    .rowMobile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .email {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 250px;
+    }
+}
