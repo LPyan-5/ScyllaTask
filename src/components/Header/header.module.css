@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     padding: 20px 16px 30px;
+    z-index: 1;
 }
 
 .darkMode {
@@ -17,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    transition: 0.6s;
 }
 
 .logo {
@@ -25,4 +27,24 @@
 
 .mainBottom {
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .root {
+        padding: 20px 16px 15px
+    }
+
+    .top {
+        margin-bottom: 25px;
+        flex-direction: column-reverse;
+        transition: 0.6s;
+    }
+
+    .swicthWrapper {
+        align-self: flex-end;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
 }
