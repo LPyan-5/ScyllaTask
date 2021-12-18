@@ -5,6 +5,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    padding: 20px 16px 30px;
 }
 
 .darkMode {
@@ -14,9 +15,12 @@
 .top {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding: 16px 20px;
+    justify-content: space-between;
     box-sizing: border-box;
+}
+
+.logo {
+    max-width: 200px;
 }
 
 .mainBottom {

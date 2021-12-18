@@ -6,6 +6,7 @@
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .darkMode {
@@ -41,4 +42,14 @@
 
 .title {
     margin-right: 10px;
+}
+
+.highlighted mark {
+    color: white;
+    background-color: cadetblue;
+}
+
+.darkHighlight mark {
+    background-color: white;
+    color: var(--global-text-color);
 }

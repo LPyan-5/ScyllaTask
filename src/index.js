@@ -5,14 +5,22 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './contexts/theme';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer, { initialState } from './store/reducers/users';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store = createStore(reducer, initialState, composeWithDevTools());
 
 ReactDOM.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<ThemeProvider>
-				<App />
-			</ThemeProvider>
-		</BrowserRouter>
+		<Provider store={store}>
+			<BrowserRouter>
+				<ThemeProvider>
+					<App />
+				</ThemeProvider>
+			</BrowserRouter>
+		</Provider>
 	</React.StrictMode>,
   document.getElementById('root')
 );

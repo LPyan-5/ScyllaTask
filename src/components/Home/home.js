@@ -5,21 +5,24 @@ import Typo from '../UI/Typo';
 import Button from '../Button';
 import List from '../List';
 import { ThemeContext } from '../../contexts/theme';
+import { actions } from '../../store/actions/users';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Home = () => {
+    const dispatch = useDispatch();
     const [{ isDark }] = useContext(ThemeContext);
-    const [users, setUsers] = useState([]);
     const [getErr, setGetErr] = useState("");
     const [isFetching, setIsFetching] = useState(false);
     const [page, setPage] = useState(0);
+    const users = useSelector(state => state.users);
     
     const handleFetchUsers = useCallback(async () => {
         try {
             setIsFetching(true);
             const response = await axios.get(
-                `https://randomuser.me/api/?page=${page}&results=8`
+                `https://randomuser.me/api/?page=${page}&results=8&nat=us,gb`
             );
-            setUsers([...users, ...response.data.results]);
+            dispatch(actions.setUsers([...users, ...response.data.results]))
             setGetErr('');
         } catch (error) {
             setGetErr('Error while loading data. Try again later.') ;           
