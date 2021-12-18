@@ -23,7 +23,7 @@ const ListItem = ({ user }) => {
                     : 
                     <div></div>}
                     <div className={`${classes.dropDown} ${isOpen ? classes.opened : ""}`} onClick={() => setIsOpen(!isOpen)}>
-                        <img src="/images/arrow.svg"/>
+                        <img src="/images/arrow.svg" alt=""/>
                     </div>
                 </div>
                 {isOpen ? <div className={classes.details}>
