@@ -9,7 +9,7 @@
 }
 
 .darkMode {
-    background-color: var(--global-green-color);
+    background-color: var(--global-green-border-color);
 }
 
 .top {
@@ -20,7 +20,7 @@
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .mainBottom {
