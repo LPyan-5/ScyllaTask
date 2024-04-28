@@ -6,15 +6,14 @@ import { ThemeContext } from '../../contexts/theme';
 const Button = (props) => {
     const { type, disabled, onClick, label } = props;
     const classes = mergeClasses(defaultClasses, props.classes);
-	const [{ isDark } ] = useContext(ThemeContext);
+    const [{ isDark }] = useContext(ThemeContext);
 
     return (
         <button
             type={type}
             className={`${classes.root}
                         ${classes.primary} ${isDark && classes.darkMode}
-                        ${disabled ? classes.disabledButton : ""}`
-                    }
+                        ${disabled ? classes.disabledButton : ''}`}
             onClick={onClick}
             disabled={disabled}
         >

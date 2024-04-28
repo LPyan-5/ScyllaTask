@@ -1,5 +1,5 @@
-import { createActions } from "redux-actions";
+import { createActions } from 'redux-actions';
 
 export const actions = createActions({
-    SET_USERS: null
+    SET_USERS: null,
 });

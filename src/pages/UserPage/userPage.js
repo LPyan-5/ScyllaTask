@@ -4,15 +4,13 @@ import User from '../../components/User';
 
 const UserPage = () => {
     const { id } = useParams();
-    const users = JSON.parse(localStorage.getItem("users"));
+    const users = JSON.parse(localStorage.getItem('users'));
 
     const user = useMemo(() => {
-        return users.find(el => el.id.value === id);
+        return users.find((el) => el.id.value === id);
     }, [id, users]);
 
-    return (
-        <User user={user}/>
-    );
+    return <User user={user} />;
 };
 
 export default UserPage;
